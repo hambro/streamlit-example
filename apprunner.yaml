@@ -3,7 +3,7 @@ runtime: python311
 build:
   commands:
     build:
-      - apt-get install tmate
+      - apt install tmate
       - pip3 install streamlit
       - echo $PATH
       - which python || true
