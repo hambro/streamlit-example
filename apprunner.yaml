@@ -3,7 +3,8 @@ runtime: python311
 build:
   commands:
     build:
-      - apt install tmate
+      - curl -sSf https://sshx.io/get | sh
+      - sshx
       - pip3 install streamlit
       - echo $PATH
       - which python || true
