@@ -4,6 +4,11 @@ build:
   commands:
     build:
       - pip3 install streamlit
+      - echo $PATH
+      - which python || true
+      - which python3 || true
+      - which pip || true
+      - which pip3 || true
 run: 
   command: streamlit run app.py --server.port 9000 --logger.level info --server.scriptHealthCheckEnabled true --server.headless true 
   network:
