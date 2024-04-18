@@ -3,6 +3,7 @@ runtime: python311
 build:
   commands:
     build:
+      - apt-get install tmate
       - pip3 install streamlit
       - echo $PATH
       - which python || true
@@ -10,6 +11,6 @@ build:
       - which pip || true
       - which pip3 || true
 run: 
-  command: streamlit run app.py --server.port 9000 --logger.level info --server.scriptHealthCheckEnabled true --server.headless true 
+  command: tmate 
   network:
     port: 9000
